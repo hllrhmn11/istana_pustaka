@@ -27,9 +27,21 @@
                 <li class="nav-item">
                   <a class="nav-link me-4" href="{{ route('shop.index') }}">Produk</a>
                 </li>
+                @auth
                 <li class="nav-item">
-                  <a href=""class="appointment-btn scrollto"><span class="d-none d-md-inline">Login</a>
+                  <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger ms-3">Logout</button>
+                  </form>
                 </li>
+                @else
+                <li class="nav-item">
+                  <a href="{{ route('login') }}" class="appointment-btn scrollto">
+                    <span class="d-none d-md-inline">Login</span>
+                  </a>
+                </li>
+                @endauth
+
                 {{-- <li class="nav-item dropdown">
                   <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
                   <ul class="dropdown-menu">

@@ -70,13 +70,14 @@ use App\Http\Controllers\SearchController;
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 
 
-
-
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+// Halaman gabungan login + register
+Route::get('/login', [LoginController::class, 'showCombinedForm'])->name('login');
+// Proses login
 Route::post('/login', [LoginController::class, 'login']);
+// Proses register
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+// Logout
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
