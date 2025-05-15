@@ -31,7 +31,7 @@ class RegisterController extends Controller
      */
     protected function redirectTo()
     {
-        return route('produk.index');
+        return route('home');
     }
 
 
@@ -73,7 +73,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role' => 'admin',
+            'role' => 'pembeli',
             'no_wa' => '+62' . ltrim($data['no_wa'], '0'),
 
         ]);
