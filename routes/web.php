@@ -27,7 +27,6 @@ Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 
 // Route CRUD lengkap
 
-
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::resource('produk', ProdukController::class)
         ->names([
@@ -40,6 +39,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
             'destroy' => 'produk.destroy',
         ]);
 });
+
+// Form jual produk (frontend)
+Route::get('/jual-produk', [ProdukController::class, 'formPenjual'])->name('produk.formPenjual');
 
 
 Route::resource('users', UserController::class); // Menangani route CRUD dasar

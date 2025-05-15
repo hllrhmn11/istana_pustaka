@@ -1,137 +1,137 @@
 @extends('frontend.index')
 @section('content')
-    <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
-        <div class="swiper main-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-md-6">
-                                <div class="banner-content">
-                                    <h1 class="display-2 text-uppercase text-dark pb-5">Your Products Are Great.</h1>
-                                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop
-                                        Product</a>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="image-holder">
-                                    <img src="{{ asset('frontend/images/banner-image.png') }}" alt="banner">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row d-flex flex-wrap align-items-center">
-                            <div class="col-md-6">
-                                <div class="banner-content">
-                                    <h1 class="display-2 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
-                                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop
-                                        Product</a>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="image-holder">
-                                    <img src="{{ asset('frontend/images/banner-image.png') }}" alt="banner">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-icon swiper-arrow swiper-arrow-prev">
-            <svg class="chevron-left">
-                <use xlink:href="#chevron-left" />
-            </svg>
-        </div>
-        <div class="swiper-icon swiper-arrow swiper-arrow-next">
-            <svg class="chevron-right">
-                <use xlink:href="#chevron-right" />
-            </svg>
-        </div>
-    </section>
-    {{-- Produk Keris Berdasarkan Kategori ID 1 --}}
-    <section id="keris-products" class="product-store position-relative padding-large no-padding-top">
+
+<!-- Hero Banner -->
+<section id="billboard" class="position-relative overflow-hidden bg-light-blue">
+  <div class="swiper main-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
         <div class="container">
-            <div class="row">
-                <div class="display-header d-flex justify-content-between pb-3">
-                    <h2 class="display-7 text-dark text-uppercase">Produk Keris Kategori 1</h2>
-                </div>
-                <div class="swiper product-swiper">
-                    <div class="swiper-wrapper">
-                        @foreach ($produkKeris as $produk)
-                            <div class="swiper-slide">
-                                <div class="product-card position-relative">
-                                    <div class="image-holder">
-                                        <img src="{{ asset('backend/dist/assets/images/keris/' . $produk->gambar) }}"
-                                            alt="{{ $produk->nama_produk }}" class="img-fluid">
-                                    </div>
-                                    <div class="cart-concern position-absolute">
-                                        <div class="cart-button d-flex">
-                                            <a href="{{ route('shop.index', 1) }}"
-                                                class="btn btn-medium btn-black text-uppercase">Lihat Semua<svg
-                                                    class="cart-outline">
-                                                    <use xlink:href="#cart-outline"></use>
-                                                </svg></a>
-                                        </div>
-                                    </div>
-                                    <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                                        <h3 class="card-title text-uppercase">
-                                            <a href="#">{{ $produk->nama_produk }}</a>
-                                        </h3>
-                                        <span class="item-price text-primary">Rp
-                                            {{ number_format($produk->harga, 0, ',', '.') }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="banner-content">
+                <h1 class="display-4 fw-bold text-dark pb-4">Produk Berkualitas Tinggi.</h1>
+                <a href="shop.html" class="btn btn-dark btn-lg rounded-pill">Shop Product</a>
+              </div>
             </div>
+              <div class="col-md-6 d-flex justify-content-center align-items-center" style="height: 100%;">
+                <img src="{{ asset('frontend/images/banner-image.png') }}" alt="banner" class="img-fluid">
+              </div>
+          </div>
         </div>
-        <div class="swiper-pagination position-absolute text-center"></div>
-    </section>
-    {{-- Produk Keris Kategori ID 2 --}}
-    <section id="keris-products-2" class="product-store position-relative padding-large no-padding-top">
-        <div class="container">
-            <div class="row">
-                <div class="display-header d-flex justify-content-between pb-3">
-                    <h2 class="display-7 text-dark text-uppercase">Produk Keris Kategori 2</h2>
-                </div>
-                <div class="swiper product-swiper">
-                    <div class="swiper-wrapper">
-                        @foreach ($produkKerisLain as $produk)
-                            <div class="swiper-slide">
-                                <div class="product-card position-relative">
-                                    <div class="image-holder">
-                                        <img src="{{ asset('backend/dist/assets/images/keris/' . $produk->gambar) }}"
-                                            alt="{{ $produk->nama_produk }}" class="img-fluid">
-                                    </div>
-                                    <div class="cart-concern position-absolute">
-                                        <div class="cart-button d-flex">
-                                            <a href="{{ route('shop.index', 2) }}"
-                                                class="btn btn-medium btn-black text-uppercase">Lihat Semua<svg
-                                                    class="cart-outline">
-                                                    <use xlink:href="#cart-outline"></use>
-                                                </svg></a>
-                                        </div>
-                                    </div>
-                                    <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                                        <h3 class="card-title text-uppercase">
-                                            <a href="#">{{ $produk->nama_produk }}</a>
-                                        </h3>
-                                        <span class="item-price text-primary">Rp
-                                            {{ number_format($produk->harga, 0, ',', '.') }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="container" style="height: 100vh; display: flex; align-items: center;">
+          <div class="row" style="width: 100%;">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+              <div class="banner-content">
+                <h1 class="display-4 fw-bold text-dark pb-4">Produk Berkualitas Tinggi.</h1>
+                <a href="shop.html" class="btn btn-dark btn-lg rounded-pill">Shop Product</a>
+              </div>
             </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <img src="{{ asset('frontend/images/banner.png') }}" alt="banner" class="img-fluid">
+            </div>
+          </div>
         </div>
-        <div class="swiper-pagination position-absolute text-center"></div>
-    </section>
+      </div>
+    </div>
+    <!-- Swiper Arrows -->
+    <div class="swiper-icon swiper-arrow swiper-arrow-prev">
+      <svg class="chevron-left"><use xlink:href="#chevron-left" /></svg>
+    </div>
+    <div class="swiper-icon swiper-arrow swiper-arrow-next">
+      <svg class="chevron-right"><use xlink:href="#chevron-right" /></svg>
+    </div>
+  </div>
+</section>
+
+<!-- Produk Keris Kategori 1 -->
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h4 text-dark text-uppercase m-0">Produk Keris Kategori 1</h2>
+      <a href="{{ route('shop.index', 1) }}" class="btn btn-outline-dark btn-sm text-uppercase">Lihat Semua</a>
+    </div>
+    <div class="swiper product-swiper">
+      <div class="swiper-wrapper">
+        @foreach ($produkKeris as $produk)
+        <div class="swiper-slide">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="{{ asset('backend/dist/assets/images/keris/' . $produk->gambar) }}" class="card-img-top object-fit-cover" style="height: 250px; object-fit: cover;" alt="{{ $produk->nama_produk }}">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title text-uppercase">
+                <a href="#" class="text-decoration-none text-dark">{{ $produk->nama_produk }}</a>
+              </h5>
+              <span class="text-primary fw-bold mt-auto">Rp {{ number_format($produk->harga, 0, ',', '.') }}</span>
+            </div>
+          </div>
+        </div>
+        @endforeach
+      </div>
+      <div class="swiper-pagination mt-3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Produk Keris Kategori 2 -->
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h4 text-dark text-uppercase m-0">Produk Keris Kategori 2</h2>
+      <a href="{{ route('shop.index', 2) }}" class="btn btn-outline-dark btn-sm text-uppercase">Lihat Semua</a>
+    </div>
+    <div class="swiper product-swiper">
+      <div class="swiper-wrapper">
+        @foreach ($produkKerisLain as $produk)
+        <div class="swiper-slide">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="{{ asset('backend/dist/assets/images/keris/' . $produk->gambar) }}" class="card-img-top object-fit-cover" style="height: 250px; object-fit: cover;" alt="{{ $produk->nama_produk }}">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title text-uppercase">
+                <a href="#" class="text-decoration-none text-dark">{{ $produk->nama_produk }}</a>
+              </h5>
+              <span class="text-primary fw-bold mt-auto">Rp {{ number_format($produk->harga, 0, ',', '.') }}</span>
+            </div>
+          </div>
+        </div>
+        @endforeach
+      </div>
+      <div class="swiper-pagination mt-3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper Init -->
+<script>
+  const swipers = document.querySelectorAll('.product-swiper');
+  swipers.forEach(swiperEl => {
+    new Swiper(swiperEl, {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      pagination: {
+        el: swiperEl.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  });
+</script>
+<script>
+#billboard .container, 
+#billboard .row {
+  height: 100vh; /* penuh tinggi viewport, bisa disesuaikan */
+  display: flex;
+  align-items: center; /* center vertikal */
+}
+</script>
+
 @endsection
