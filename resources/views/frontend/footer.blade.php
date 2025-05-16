@@ -1,140 +1,69 @@
-    <footer id="footer" class="overflow-hidden">
-      <div class="container">
-        <div class="row">
-          <div class="footer-top-area">
-            <div class="row d-flex flex-wrap justify-content-between">
-              <div class="col-lg-3 col-sm-6 pb-3">
-                <div class="footer-menu">
-                  <img src="{{ asset('frontend/images/main-logo.png') }}" alt="logo">
-                  <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
-                  <div class="social-links">
-                    <ul class="d-flex list-unstyled">
-                      <li>
-                        <a href="#">
-                          <svg class="facebook">
-                            <use xlink:href="#facebook" />
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <svg class="instagram">
-                            <use xlink:href="#instagram" />
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <svg class="twitter">
-                            <use xlink:href="#twitter" />
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <svg class="linkedin">
-                            <use xlink:href="#linkedin" />
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <svg class="youtube">
-                            <use xlink:href="#youtube" />
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 col-sm-6 pb-3">
-                <div class="footer-menu text-uppercase">
-                  <h5 class="widget-title pb-2">Quick Links</h5>
-                  <ul class="menu-list list-unstyled text-uppercase">
-                    <li class="menu-item pb-2">
-                      <a href="#">Home</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">About</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Shop</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Blogs</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6 pb-3">
-                <div class="footer-menu text-uppercase">
-                  <h5 class="widget-title pb-2">Help & Info Help</h5>
-                  <ul class="menu-list list-unstyled">
-                    <li class="menu-item pb-2">
-                      <a href="#">Track Your Order</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Returns Policies</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Shipping + Delivery</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Contact Us</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Faqs</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6 pb-3">
-                <div class="footer-menu contact-item">
-                  <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
-                  <p>Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
-                  </p>
-                  <p>If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
-                  </p>
-                </div>
-              </div>
+<footer id="footer" class="overflow-hidden bg-secondary text-white pt-5">
+  <div class="container">
+    <div class="row footer-top-area">
+      <div class="row d-flex flex-wrap justify-content-between">
+        <!-- Logo dan Deskripsi -->
+        <div class="col-lg-3 col-sm-6 pb-4">
+          <div class="footer-menu">
+            <img src="{{ asset('frontend/images/main-logo.png') }}" alt="Istana Pusaka" width="150">
+            <p class="mt-3">Istana Pusaka menghadirkan koleksi keris asli Sumenep dengan nilai budaya tinggi dan sentuhan klasik warisan leluhur.</p>
+            <div class="social-links">
+              <ul class="d-flex list-unstyled gap-3 mt-3">
+                <li><a href="#"><i class="fab fa-facebook-f text-white"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram text-white"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube text-white"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-      <hr>
-    </footer>
-    <div id="footer-bottom">
-      <div class="container">
-        <div class="row d-flex flex-wrap justify-content-between">
-          <div class="col-md-4 col-sm-6">
-            <div class="Shipping d-flex">
-              <p>We ship with:</p>
-              <div class="card-wrap ps-2">
-                <img src="{{ asset('frontend/images/dhl.png') }}" alt="visa">
-                <img src="{{ asset('frontend/images/shippingcard.png') }}" alt="mastercard">
-              </div>
-            </div>
+
+        <!-- Navigasi Cepat -->
+        <div class="col-lg-2 col-sm-6 pb-4">
+          <div class="footer-menu text-uppercase">
+            <h5 class="widget-title pb-2">Menu</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item pb-2"><a href="/" class="text-white">Beranda</a></li>
+              <li class="menu-item pb-2"><a href="/tentang" class="text-white">Tentang Kami</a></li>
+              <li class="menu-item pb-2"><a href="/shop" class="text-white">Produk</a></li>
+              <li class="menu-item pb-2"><a href="/kontak" class="text-white">Kontak</a></li>
+            </ul>
           </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="payment-method d-flex">
-              <p>Payment options:</p>
-              <div class="card-wrap ps-2">
-                <img src="{{ asset('frontend/images/visa.jpg') }}" alt="visa">
-                <img src="{{ asset('frontend/images/mastercard.jpg') }}" alt="mastercard">
-                <img src="{{ asset('frontend/images/paypal.jpg') }}" alt="paypal">
-              </div>
-            </div>
+        </div>
+
+        <!-- Info Tambahan -->
+        <div class="col-lg-3 col-sm-6 pb-4">
+          <div class="footer-menu text-uppercase">
+            <h5 class="widget-title pb-2">Informasi</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item pb-2"><a href="https://wa.me/6281234567890" class="text-white">Konsultasi via WA</a></li>
+            </ul>
           </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="copyright">
-              <p>© Copyright 2025. Design by <a href="">IstanaPusaka</a> Distribution by <a href="https://themewagon.com">IstanaPusaka</a>
-              </p>
-            </div>
+        </div>
+
+        <!-- Kontak -->
+        <div class="col-lg-3 col-sm-6 pb-4">
+          <div class="footer-menu contact-item">
+            <h5 class="widget-title text-uppercase pb-2">Hubungi Kami</h5>
+            <p>Email: <a href="mailto:info@istanapusaka.com" class="text-white">info@istanapusaka.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/6281234567890" class="text-white">+62 812 3456 7890</a></p>
+            <p>Alamat: Sumenep, Madura - Jawa Timur</p>
           </div>
         </div>
       </div>
     </div>
+    <hr class="bg-light">
+  </div>
+</footer>
+
+<div id="footer-bottom" class="bg-dark py-3 text-center text-white">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-md-6 text-md-start text-center mb-2 mb-md-0">
+        <p class="mb-0">© 2025 Istana Pusaka. Hak Cipta Dilindungi.</p>
+      </div>
+      <div class="col-md-6 text-md-end text-center">
+        <p class="mb-0">Design by <a href="#" class="text-warning">Istana Pusaka</a></p>
+      </div>
+    </div>
+  </div>
+</div>

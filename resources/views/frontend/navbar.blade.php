@@ -1,106 +1,71 @@
-    <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
-      <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
-        <div class="container-fluid">
+<header id="header" class="site-header header-scrolled position-fixed text-black" style="background-color: #f5f5f5;">
+  <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">
+        <img src="{{ asset('frontend/images/main-logo.png') }}" class="logo">
+      </a>
+      <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="navbar-icon">
+          <use xlink:href="#navbar-icon"></use>
+        </svg>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" style="background-color: #f5f5f5;">
+        <div class="offcanvas-header px-4 pb-0">
           <a class="navbar-brand" href="/home">
             <img src="{{ asset('frontend/images/main-logo.png') }}" class="logo">
           </a>
-          <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <svg class="navbar-icon">
-              <use xlink:href="#navbar-icon"></use>
-            </svg>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-            <div class="offcanvas-header px-4 pb-0">
-              <a class="navbar-brand" href="/home">
-                <img src="{{ asset('frontend/images/main-logo.png') }}" class="logo">
-              </a>
-              <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link me-4 active" href="{{ route('home') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-4" href="#company-services">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-4" href="{{ route('shop.index') }}">Produk</a>
-                </li>
-                @auth
-                <li class="nav-item">
-                  <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="btn btn-danger ms-3">Logout</button>
-                  </form>
-                </li>
-                @else
-                <li class="nav-item">
-                  <a href="{{ route('login') }}" class="appointment-btn scrollto">
-                    <span class="d-none d-md-inline">Login</span>
-                  </a>
-                </li>
-                @endauth
-
-                {{-- <li class="nav-item dropdown">
-                  <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="about.html" class="dropdown-item">About</a>
-                    </li>
-                    <li>
-                      <a href="blog.html" class="dropdown-item">Blog</a>
-                    </li>
-                    <li>
-                      <a href="shop.html" class="dropdown-item">Shop</a>
-                    </li>
-                    <li>
-                      <a href="cart.html" class="dropdown-item">Cart</a>
-                    </li>
-                    <li>
-                      <a href="checkout.html" class="dropdown-item">Checkout</a>
-                    </li>
-                    <li>
-                      <a href="single-post.html" class="dropdown-item">Single Post</a>
-                    </li>
-                    <li>
-                      <a href="single-product.html" class="dropdown-item">Single Product</a>
-                    </li>
-                    <li>
-                      <a href="contact.html" class="dropdown-item">Contact</a>
-                    </li>
-                  </ul>
-                </li> --}}
-                <li class="nav-item">
-                  <div class="user-items ps-5">
-                    <ul class="d-flex justify-content-end list-unstyled">
-                      <li class="search-item pe-3">
-                        <a href="#" class="search-button">
-                          <svg class="search">
-                            <use xlink:href="#search"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="pe-3">
-                        <a href="#">
-                          <svg class="user">
-                            <use xlink:href="#user"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="cart.html">
-                          <svg class="cart">
-                            <use xlink:href="#cart"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
         </div>
-      </nav>
-    </header> 
+        <div class="offcanvas-body">
+          <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link me-4 active" href="{{ route('home') }}">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-4" href="{{ route('shop.index') }}">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-4" href="{{ route('tentang') }}">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-4" href="{{ route('kontak') }}">Kontak</a>
+            </li>
+            @auth
+            <li class="nav-item">
+              <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger ms-3">Logout</button>
+              </form>
+            </li>
+            @else
+            <li class="nav-item">
+              <a href="{{ route('login') }}" class="appointment-btn scrollto" style="background-color: #28a745; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none;">
+                <span class="d-none d-md-inline">Login</span>
+              </a>
+            </li>
+            @endauth
+
+            {{-- SEARCH ICON --}}
+            <li class="nav-item">
+              <div class="user-items ps-4">
+                <ul class="d-flex justify-content-end list-unstyled mb-0">
+                  <li class="search-item">
+                    <a href="#" class="search-button d-flex align-items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 
+                        1.398h-.001l3.85 3.85a1 1 0 0 0 
+                        1.415-1.414l-3.85-3.85zm-5.242.656a5.5 
+                        5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            {{-- END SEARCH ICON --}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>@yield('title') - Istana Pusaka</title>
     
     {{-- Bootstrap CSS --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -32,9 +31,11 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container">
-        <a class="navbar-brand" href="/">Istana Pusaka</a>
-        <div>
+    <div class="container d-flex justify-content-center">
+        <h2 class="text-white m-0">@yield('title') - Istana Pusaka</h2>
+    </div>
+</nav>
+
             {{-- 
             @auth
                 <span class="text-white me-3">Halo, {{ auth()->user()->name }}</span>

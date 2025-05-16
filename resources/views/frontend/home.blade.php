@@ -25,7 +25,7 @@
           <div class="row" style="width: 100%;">
             <div class="col-md-6 d-flex flex-column justify-content-center">
               <div class="banner-content">
-                <h1 class="display-4 fw-bold text-dark pb-4">Produk Berkualitas Tinggi.</h1>
+                <h1 class="display-4 fw-bold text-dark pb-4">Tersedia Produk Terbaik.</h1>
                 <a href="shop.html" class="btn btn-dark btn-lg rounded-pill">Shop Product</a>
               </div>
             </div>
@@ -45,12 +45,71 @@
     </div>
   </div>
 </section>
+<section id="profil-istana-pusaka" class="padding-large bg-light text-dark">
+  <div class="container">
+    <div class="row mb-5 text-center">
+      <div class="col-12">
+        <h2 class="display-5 fw-bold">Selamat Datang di <span class="text-primary">Istana Pusaka</span></h2>
+        <p class="lead">Website e-commerce terpercaya yang menyediakan berbagai jenis <strong>keris asli Sumenep</strong> berkualitas tinggi.</p>
+      </div>
+    </div>
 
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fas fa-star fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Produk Berkualitas Tinggi</h5>
+            <p class="card-text">Setiap keris dibuat dengan ketelitian dan bahan terbaik oleh empu keris profesional dari Sumenep.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fas fa-certificate fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Autentik & Bersertifikat</h5>
+            <p class="card-text">Setiap keris memiliki sertifikat keaslian sebagai bukti pusaka warisan budaya asli.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fas fa-gem fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Koleksi Eksklusif</h5>
+            <p class="card-text">Tersedia berbagai jenis keris langka dan unik yang hanya ada di Istana Pusaka.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fab fa-whatsapp fa-2x text-success"></i>
+            </div>
+            <h5 class="card-title fw-bold">Pembelian Langsung via WhatsApp</h5>
+            <p class="card-text">Klik tombol beli dan langsung terhubung ke WhatsApp admin kami untuk pemesanan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Produk Keris Kategori 1 -->
 <section class="py-5">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="h4 text-dark text-uppercase m-0">Produk Keris Kategori 1</h2>
+      <h2 class="h4 text-dark text-uppercase m-0">Produk Keris Kategori Lurus</h2>
       <a href="{{ route('shop.index', 1) }}" class="btn btn-outline-dark btn-sm text-uppercase">Lihat Semua</a>
     </div>
     <div class="swiper product-swiper">
@@ -73,12 +132,11 @@
     </div>
   </div>
 </section>
-
 <!-- Produk Keris Kategori 2 -->
 <section class="py-5">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="h4 text-dark text-uppercase m-0">Produk Keris Kategori 2</h2>
+      <h2 class="h4 text-dark text-uppercase m-0">Produk Keris Kategori LUK</h2>
       <a href="{{ route('shop.index', 2) }}" class="btn btn-outline-dark btn-sm text-uppercase">Lihat Semua</a>
     </div>
     <div class="swiper product-swiper">

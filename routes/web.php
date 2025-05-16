@@ -15,7 +15,13 @@ Route::get('/', function () {
     //return view('welcome');
     return view('frontend.home');
 });
-
+// Route untuk halaman Tentang Kami
+Route::get('/tentang', function () {
+    return view('frontend.tentang');
+})->name('tentang');
+Route::get('/kontak', function () {
+    return view('frontend.kontak');
+})->name('kontak');
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -23,6 +29,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 use App\Http\Controllers\ShopController;
 
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
+
+use App\Http\Controllers\KontakController;
+Route::post('/kontak/kirim', [KontakController::class, 'kirim'])->name('kontak.kirim');
+
 
 
 // Route CRUD lengkap
