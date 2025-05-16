@@ -1,10 +1,11 @@
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="{{ asset('backend/dist/assets/images/logo.png') }}" alt="logo" /></a>
-          {{-- <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a> --}}
-        </div>
-        <ul class="nav">
-          <li class="nav-item profile">
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="{{ asset('backend/dist/assets/images/logo.png') }}"
+                alt="logo" /></a>
+        {{-- <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a> --}}
+    </div>
+    <ul class="nav">
+        <li class="nav-item profile">
             {{-- <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
@@ -52,20 +53,20 @@
                 </a>
               </div>
             </div> --}}
-          </li>
-          <li class="nav-item nav-category">
+        </li>
+        <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ url('/') }}">
-              <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
-              </span>
-              <span class="menu-title">Dashboard</span>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('dashboard.index') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-speedometer"></i>
+                </span>
+                <span class="menu-title">Dashboard</span>
             </a>
-          </li>
-          <li class="nav-item menu-items">
-              {{-- Kode lama dikomentari
+        </li>
+        <li class="nav-item menu-items">
+            {{-- Kode lama dikomentari
               <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                   <span class="menu-icon">
                       <i class="mdi mdi-laptop"></i>
@@ -81,30 +82,30 @@
                   </ul>
               </div>
               --}}
-          
-              {{-- Kode baru: menu langsung menuju halaman index produk --}}
-              <a class="nav-link" href="{{ route('produk.index') }}">
-                  <span class="menu-icon">
-                      <i class="mdi mdi-cart"></i> {{-- Icon bisa diganti sesuai kebutuhan --}}
-                  </span>
-                  <span class="menu-title">Data Produk</span>
-              </a>
-          </li>
-          <li class="nav-item menu-items">
-              <a class="nav-link" href="{{ route('users.index') }}">
-                  <span class="menu-icon">
-                      <i class="mdi mdi-cart"></i> {{-- Icon bisa diganti sesuai kebutuhan --}}
-                  </span>
-                  <span class="menu-title">Data User</span>
-              </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('kategori.index') }}">
-              <span class="menu-icon">
-                <i class="mdi mdi-shape-outline"></i> {{-- Ganti icon sesuai preferensi --}}
-              </span>
-              <span class="menu-title">Data Kategori</span>
+
+            {{-- Kode baru: menu langsung menuju halaman index produk --}}
+            <a class="nav-link" href="{{ route('produk.index') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-cart"></i> {{-- Icon bisa diganti sesuai kebutuhan --}}
+                </span>
+                <span class="menu-title">Data Produk</span>
             </a>
-          </li>
-        </ul>
-      </nav>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('users.index') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-cart"></i> {{-- Icon bisa diganti sesuai kebutuhan --}}
+                </span>
+                <span class="menu-title">Data User</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('kategori.index') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-shape-outline"></i> {{-- Ganti icon sesuai preferensi --}}
+                </span>
+                <span class="menu-title">Data Kategori</span>
+            </a>
+        </li>
+    </ul>
+</nav>

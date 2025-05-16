@@ -50,6 +50,8 @@
     </div>
     <!-- container-scroller -->
 
+    @yield('script')
+
     <!-- plugins:js -->
     <script src="{{ asset('backend/dist/assets/vendors/js/vendor.bundle.base.js') }}"></script>
     <!-- endinject -->

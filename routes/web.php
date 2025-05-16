@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -22,6 +23,7 @@ Route::get('/tentang', function () {
 Route::get('/kontak', function () {
     return view('frontend.kontak');
 })->name('kontak');
+
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -31,6 +33,7 @@ use App\Http\Controllers\ShopController;
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 
 use App\Http\Controllers\KontakController;
+
 Route::post('/kontak/kirim', [KontakController::class, 'kirim'])->name('kontak.kirim');
 
 
@@ -38,6 +41,16 @@ Route::post('/kontak/kirim', [KontakController::class, 'kirim'])->name('kontak.k
 // Route CRUD lengkap
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::resource('dashboard', DashboardController::class)
+        ->names([
+            'index' => 'dashboard.index',
+            'create' => 'dashboard.create',
+            'store' => 'dashboard.store',
+            'show' => 'dashboard.show',
+            'edit' => 'dashboard.edit',
+            'update' => 'dashboard.update',
+            'destroy' => 'dashboard.destroy',
+        ]);
     Route::resource('produk', ProdukController::class)
         ->names([
             'index' => 'produk.index',
